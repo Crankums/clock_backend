@@ -5,6 +5,8 @@ ruby '2.6.1'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'pry'
 gem 'fast_jsonapi'
+gem 'devise_token_auth'
+gem 'validates'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.1'
 # Use postgresql as the database for Active Record
