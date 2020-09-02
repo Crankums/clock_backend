@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  week_start: 2020-09-01 22:36:33
+  week_end: 2020-09-01 22:36:33
+  employee_id: 1
+
+two:
+  week_start: 2020-09-01 22:36:33
+  week_end: 2020-09-01 22:36:33
+  employee_id: 1
