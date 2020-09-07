@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 ##Write Employee Seed File!
+Employee.destroy_all
 
  employees = Employee.create([{ name: "Frank Johnson",
         employee_id: 0001,
