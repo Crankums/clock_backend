@@ -17,11 +17,11 @@ ActiveRecord::Schema.define(version: 2020_09_02_033633) do
 
   create_table "employees", force: :cascade do |t|
     t.string "name"
-    t.integer "employee_id"
+    t.string "employee_id"
     t.string "password_digest"
     t.string "email"
     t.string "phone_number"
-    t.integer "job_id"
+    t.string "job_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
