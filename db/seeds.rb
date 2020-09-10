@@ -40,7 +40,7 @@ end
        email = email_builder(name)
        phone_number = Faker::PhoneNumber.phone_number
        job_id = Faker::Number.number(digits: 3)
-       Employee.create(name: name, employee_id: employee_id, password: "password", phone_number: phone_number, job_id: job_id)
+       Employee.create(name: name, employee_id: employee_id, password: "password", email: email, phone_number: phone_number, job_id: job_id)
 end
 
 
