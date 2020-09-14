@@ -13,6 +13,9 @@ module Types
 
     def employee(id:)
       Employee.find(id)
+    end
 
-
+    
+  
+  end
 end
