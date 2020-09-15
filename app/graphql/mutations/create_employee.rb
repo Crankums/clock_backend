@@ -6,7 +6,13 @@ class Mutations::CreateEmployee < Mutations::BaseMutation
     field :errors, [String], null: false
 
     def resolve(name:, email:)
-        employee = Employee.new(name: name, email: email)
+        employee = Employee.new(
+            name: name, 
+            email: email, 
+            password: "password", 
+            job_id:"0000", 
+            employee_id: "0000", 
+            phone_number: "0000")
         if employee.save
             {
                 employee: employee,
@@ -14,7 +20,7 @@ class Mutations::CreateEmployee < Mutations::BaseMutation
             }
         else
             {
-                employee:nil,
+                employee: nil,
                 errors: employee.errors.full_messages
             }
         end
