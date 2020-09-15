@@ -35,7 +35,7 @@ def email_builder(string)
 end 
 
 10.times do
-       name = Faker::Name.unique.name
+       name = Faker::Name.first_name+" "+Faker::Name.last_name
        employee_id = Faker::Number.number(digits: 4)
        email = email_builder(name)
        phone_number = Faker::PhoneNumber.phone_number
