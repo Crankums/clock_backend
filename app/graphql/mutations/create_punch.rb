@@ -1,5 +1,5 @@
-class Mutations::Punch < Mutations::BaseMutation
-    argument :todays_date, Datetime, required: true
+class Mutations::CreatePunch < Mutations::BaseMutation
+    argument :todays_date, DateTime, required: true
     argument :employee_id, Integer, required: true
 
     field :punch, Types::PunchType, null: false
