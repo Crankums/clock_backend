@@ -14,8 +14,9 @@ Backend
             -not going to bother with employee management system (job_id tables or generated numbers); these will be random values. 
 ~-add "t.datetime: todays_date" to Punch model~
 ~-attempt to implement GraphQL~
-    -create punch and timecard objects
--play around with graphiql
+    ~-create punch and timecard objects~
+    -determine what other query types should be made
+~-play around with graphiql~
 -admin layer? authorization to edit?
 
 
