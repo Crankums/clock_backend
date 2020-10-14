@@ -8,7 +8,7 @@ class Mutations::CreateEmployee < Mutations::BaseMutation
     def resolve(name:, email:)
         employee = Employee.new(
             name: name, 
-            email: email, 
+            email: Employee.email_builder(name), 
             password: "password", 
             job_id:"0000", 
             employee_id: "0000", 
