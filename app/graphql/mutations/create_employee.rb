@@ -5,14 +5,14 @@ class Mutations::CreateEmployee < Mutations::BaseMutation
     field :employee, Types::EmployeeType, null: false
     field :errors, [String], null: false
 
-    def resolve(name:, email:)
+    def resolve(name:, phone_number:)
         employee = Employee.new(
             name: name, 
             email: Employee.email_builder(name), 
             password: "password", 
             job_id:"0000", 
             employee_id: "0000", 
-            phone_number: "0000")
+            phone_number: phone_number)
         if employee.save
             {
                 employee: employee,
