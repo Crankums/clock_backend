@@ -24,6 +24,8 @@ Backend
     -determine what other query types should be made
 ~-play around with graphiql~
 -admin layer? authorization to edit?
+-create timecards for employees. what's the difference between timecard and punches? is this a front-end only thing or should there be a back-end presence as well?
+-punches should show most recent punches ONLY, otherwise its just a timecard.
 
 
 Frontend
