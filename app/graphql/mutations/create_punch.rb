@@ -10,12 +10,11 @@ class Mutations::CreatePunch < Mutations::BaseMutation
     def resolve(todays_date:, employee_id:)
         employee = Employee.find(id: employee_id)
         if !employee.timecard
-            {
-                employee.create_timecard(
-                    week_start: Date.today.beginning_of_week(:monday),
-                    week_end: Date.today+4
-                )
-            }
+            employee.create_timecard(
+                Date.today.beginning_of_week(:monday)
+                week_start: date,
+                week_end: date + 4
+            )
         punch = employee.punch.build(
             todays_date: todays_date, 
             employee_id: employee_id, 

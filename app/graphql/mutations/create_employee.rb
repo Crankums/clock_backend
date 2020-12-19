@@ -14,6 +14,11 @@ class Mutations::CreateEmployee < Mutations::BaseMutation
             employee_id: "0000", 
             phone_number: phone_number)
         if employee.save
+            date = Date.today.beginning_of_week(:monday)
+            employee.create_timecard(
+                week_start: date, 
+                week_end: date + 4
+            )
             {
                 employee: employee,
                 errors: [],
