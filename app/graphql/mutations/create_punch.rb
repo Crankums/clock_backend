@@ -7,7 +7,7 @@ class Mutations::CreatePunch < Mutations::BaseMutation
     field :punch, Types::PunchType, null: false
     field :errors, [String], null: false
 
-    def resolve(todays_date:, employee_id:)
+    def resolve(todays_date:, employee_id:, punch_time:, punch_type:)
         employee = Employee.find(id: employee_id)
         if !employee.timecard
             employee.create_timecard(
